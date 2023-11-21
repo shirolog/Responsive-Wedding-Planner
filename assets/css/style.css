@@ -1,0 +1,127 @@
+/** @format */
+
+:root {
+  --pink: #ef5777;
+  --white: #fff;
+  --black: #222;
+  --transparent-white: rgba(255, 255, 255, 0.3);
+  --border: 0.2rem solid var(--black);
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* home */
+.home {
+  padding-bottom: 0;
+}
+
+.home .slide {
+  min-height: 60rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin-bottom: 4rem;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.home .slide .content {
+  background: var(--transparent-white);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(0.5rem);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  padding: 2rem;
+  width: 60rem;
+}
+
+.home .slide .content h3 {
+  font-size: 3rem;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.home .slide .content p {
+  font-size: 1.5rem;
+  color: var(--black);
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0);
+  }
+}
+
+.home .swiper-slide-active .content {
+  animation: popUp 0.2s linear backwards 0.2s;
+}
+
+/* swiper-pagination */
+.swiper-pagination {
+  bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  background: var(--pink);
+}
+
+/* services */
+.services .slide {
+  height: 35rem;
+  user-select: none;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.services .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.2s linear;
+}
+
+.services .slide:hover img {
+  transform: scale(1.1);
+}
+
+.services .slide .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--transparent-white);
+  backdrop-filter: blur(0.5rem);
+  padding: 2rem;
+  text-align: center;
+  transition: 0.2s linear;
+  transform: translateY(calc(100% - 6.5rem));
+}
+
+.services .slide .content:hover {
+  transform: translateY(0);
+}
+
+.services .slide .content h3 {
+  font-size: 2rem;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.services .slide .content p {
+  font-size: 1.5rem;
+  color: var(--black);
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+
+@media screen and (max-width: 450px){
+  /* services */
+  .services .slide .content p{
+    font-size: 1.3rem;
+  }
+}

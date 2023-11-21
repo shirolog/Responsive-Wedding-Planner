@@ -1,0 +1,66 @@
+/** @format */
+
+:root {
+  --pink: #ef5777;
+  --white: #fff;
+  --black: #222;
+  --transparent-white: rgba(255, 255, 255, 0.3);
+  --border: 0.2rem solid var(--black);
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* contact */
+.contact form {
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  background: var(--transparent-white);
+}
+
+.contact form .flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact form .flex .inputBox {
+  flex: 1 1 41rem;
+}
+
+.contact form .flex .inputBox span {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--black);
+  text-transform: capitalize;
+}
+
+.contact form .flex .inputBox input,
+.contact form .flex .inputBox textarea,
+.contact form .flex .inputBox select {
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    border: var(--border);
+    border-radius: .5rem;
+    font-size: 1.7rem;
+    background: var(--transparent-white);
+}
+
+.contact form .flex .inputBox textarea{
+    height: 20rem;
+    resize: none;
+}
+
+.contact form .btn{
+    margin-top: 2rem;
+}
+
+
+/* media query */
+@media screen and (max-width: 450px){
+    /* contact */
+    .contact form .btn{
+        width: 100%;
+        display: block;
+    }
+}

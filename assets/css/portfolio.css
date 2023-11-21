@@ -1,0 +1,47 @@
+/** @format */
+:root {
+  --pink: #ef5777;
+  --white: #fff;
+  --black: #222;
+  --transparent-white: rgba(255, 255, 255, 0.3);
+  --border: 0.2rem solid var(--black);
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* portfolio */
+.portfolio .portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.portfolio .portfolio-container .box{
+    background: var(--transparent-white);
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.portfolio .portfolio-container .box h3{
+    font-size: 2rem;
+    color: var(--black);
+    text-align: center;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.portfolio .portfolio-container .box .image {
+  height: 25rem;
+  overflow: hidden;
+}
+
+.portfolio .portfolio-container .box .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.2s linear;
+}
+
+.portfolio .portfolio-container .box:hover .image img{
+    transform: scale(1.1);
+}
